@@ -4,7 +4,7 @@
   "description": "For my Shopify theme",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/atkinsl88/shopify-theme-001#readme",
   "dependencies": {
-    "@shopify/themekit": "^1.1.9"
+    "@shopify/themekit": "^1.1.9",
+    "bootstrap": "^5.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

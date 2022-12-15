@@ -1,0 +1,158 @@
+// /** Font Styles **/
+
+// @font-face {
+//   font-family: GSK;
+//   src: url("../fonts/GSKPrecision-Regular.ttf")
+// }
+
+// @include media-breakpoint-up (xs) {
+
+//   %heading {
+//     font-family: 'GSK', sans-serif;
+//     font-weight: 400;
+//     letter-spacing: -1px;
+//     color: $primary-black;
+//     margin-bottom: 1.25rem;
+//   }
+
+//   %paragraph {
+//     font-family: 'GSK', sans-serif;
+//     font-weight: 400;
+//     color: $primary-black;
+//   }
+
+//   h1 {
+//     @extend %heading;
+//     font-size: $mob-font-size-h1;
+//     line-height: $mob-font-size-h1 * 2.5;
+//     margin-bottom: 1rem
+//   }
+
+//   h2 {
+//     @extend %heading;
+//     font-size: $mob-font-size-h2;
+//     line-height: 3rem;
+//     margin-bottom: 0.5rem
+//   }
+
+//   h3 {
+//     @extend %heading;
+//     font-size: $mob-font-size-h3;
+//     line-height: $mob-font-size-h3 * 1.5;
+//     margin-bottom: 0.5rem
+//   }
+
+//   h4 {
+//     @extend %heading;
+//     font-size: $mob-font-size-h4;
+//     line-height: $mob-font-size-h3 * 1.5;
+//     margin-bottom: 0.5rem
+//   }
+
+//   p {
+//     @extend %paragraph;
+//     font-size: $mob-font-size-sm;
+//     line-height: 1.5rem;
+//   }
+
+//   a {
+//     @extend %paragraph;
+//     font-size: $mob-font-size-md;
+//     line-height: $mob-font-size-sm * 1.5;
+//     text-decoration: none;
+//   }
+
+//   ul {
+//     @extend %paragraph;
+//     font-size: $mob-font-size-md;
+//     line-height: $mob-font-size-sm * 1.5;
+//     margin-left: 1.25rem;
+//     margin: 1rem 0;
+//   }
+
+//   li {
+//     @extend %heading;
+//     font-size: $mob-font-size-h4;
+//     line-height: $mob-font-size-h3 * 1.5;
+//     margin-bottom: 0;
+//     margin-left: 1.5rem;
+//   }
+
+//   label {
+//     @extend p;
+//     margin: 0 1rem;
+//   }
+
+// }
+
+// @include media-breakpoint-up (md) {
+
+//   h1 {
+//     font-size: $tab-font-size-h1;
+//   }
+
+//   h2 {
+//     font-size: $tab-font-size-h2;
+//   }
+
+//   h3 {
+//     font-size: $tab-font-size-h3;
+//   }
+
+//   p {
+//     font-size: $tab-font-size-md;
+//   }
+
+//   a {
+//     font-size: $tab-font-size-md;
+//   }
+
+//   a:hover {
+//     font-size: $tab-font-size-md;
+//   }
+
+//   ul {
+//     font-size: $tab-font-size-md;
+//   }
+
+//   li {
+//     font-size: $tab-font-size-md;
+//   }
+
+// }
+
+// @include media-breakpoint-up (lg) {
+
+//   h1 {
+//     font-size: $desk-font-size-h1;
+//   }
+
+//   h2 {
+//     font-size: $desk-font-size-h2;
+//   }
+
+//   h3 {
+//     font-size: $desk-font-size-h3;
+//   }
+
+//   p {
+//     font-size: $desk-font-size-lg;
+//   }
+
+//   a {
+//     font-size: $desk-font-size-lg;
+//   }
+
+//   a:hover {
+//     font-size: $desk-font-size-lg;
+//   }
+
+//   ul {
+//     font-size: $desk-font-size-lg;
+//   }
+
+//   li {
+//     font-size: $desk-font-size-lg;
+//   }
+
+// }

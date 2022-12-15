@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// Imports for fundementals to load first
+@import './_variables.scss';
+@import './_breakpoints';
+@import './_bs-grid';
+@import './_fonts.scss';
+
+// Components
+@import './components/components.scss';
