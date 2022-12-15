@@ -29,4 +29,5 @@ module.exports = {
   },
 };
 
-// `npm run build` in theme folder
+// `npm run webpack` in theme folder.
+// Run 'theme watch --allow-live' to sync.
