@@ -1,0 +1,11 @@
+@include media-breakpoint-up (xs) {
+  .product-card {
+    .product-text {
+      padding: 1rem 0;
+      text-align: center;
+      p {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@include media-breakpoint-up (xs) {
+  .featured-collection {
+    padding: $region-padding;
+    .collection-intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 2rem;
+    }
+    .collection-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,12 +1,31 @@
-<h2>{{ collections{{['frontpage'].title}}</h2>
+<!-- Hero image -->
+<section class="hero-image">
+  <div class="hero-text">
+    <h1>Headline that grabs people’s attention</h1>
+    <button><a href="/">Shop Now</a></button>
+  </div>
+</section>
 
-{% for product in collections['frontpage'].products %}
-<div>
-  <a href="{{ product.url }}">
-    <img src="{{ product | image_url: width: 400 }}"/>
-    <h3>{{ product.title }}</h3>
-    <p>{{ product.price | money }}</p>
-  </a>
-</div>
-  {{- product.title | link_to: product.url }}
-{% endfor %}
+<!-- Featured collection -->
+<section class="featured-collection container">
+  <!-- Title -->
+  <div class="collection-intro">
+    <h2>{{ collections{{['frontpage'].title}}</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit, libero nec viverra porttitor.</p>
+  </div>
+  <div class="collection-wrapper">
+    <!-- Define product collection -->
+    {% for product in collections['frontpage'].products %}
+      <!-- Mark-up for each product, looped through -->
+      {% render 'product-item', product: product %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Highlighted section -->
+<section class="highlighted-section">
+  <div class="highlighted-text">
+    <h1>Headline that grabs people’s attention</h1>
+    <button><a href="/">Shop Now</a></button>
+  </div>
+</section>

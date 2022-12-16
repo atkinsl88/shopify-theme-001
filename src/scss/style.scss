@@ -4,10 +4,12 @@
 }
 
 // Imports for fundementals to load first
-@import './_variables.scss';
+@import './_variables';
 @import './_breakpoints';
 @import './_bs-grid';
-@import './_fonts.scss';
+@import './_fonts';
+@import './buttons';
+@import './images';
 
 // Components
-@import './components/components.scss';
+@import './components/components';

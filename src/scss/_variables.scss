@@ -1,17 +1,6 @@
 // Colors
-$color-text: hsl(10, 20%, 20%);
-$color-background: hsl(10, 10%, 98%);
-$color-primary: hsl(10, 80%, 50%);
-$color-secondary: hsl(10, 60%, 50%);
-$color-highlight: hsl(10, 40%, 90%);
-$color-purple: hsl(250, 60%, 30%);
-$color-muted: hsl(10, 20%, 94%);
-$color-gray: hsl(10, 20%, 50%);
-
-// Fonts
-$font-body: system-ui, -apple-system, BlinkMacSystemFont;
-$font-heading: inherit;
-$font-monospace: Menlo, monospace;
+$primary-colour: #000000;
+$secondary-colour: #f5f5f5;
 
 /** Breakpoints **/
 $grid-breakpoints: (
@@ -51,7 +40,7 @@ $desk-font-size-h3: 1.75rem;
 $desk-font-size-h4: 1rem;
 
 /** Padding **/
-$region-padding: 2rem 0;
+$region-padding: 4rem 0;
 
 /** Margin **/
 $region-margin: 2rem 0;

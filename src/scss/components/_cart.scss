@@ -1,0 +1,28 @@
+@include media-breakpoint-up (xs) {
+  table.cart {
+    display: flex;
+    justify-content: center;
+    tbody {
+      border: 1px solid $secondary-colour;
+      width: 100%;
+    }
+    tr {
+      padding: 1.5rem;
+      b
+      th {
+        padding: 1.5rem;
+      }
+      td {
+        padding: 1.5rem;
+      }
+    }
+    .cart-product {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img {
+        max-height: 150px;
+      }
+    }
+  }
+}

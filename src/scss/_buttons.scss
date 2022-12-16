@@ -1,0 +1,30 @@
+@include media-breakpoint-up (xs) {
+  button {
+    background-color: $primary-colour;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    color: $secondary-colour;
+    text-transform: uppercase;
+    @extend a;
+    a {
+      color: $secondary-colour;
+      text-transform: uppercase;
+    }
+  }
+  button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    background-color: #374151;
+  }
+  button.icon {
+    background-color: unset;
+    padding: unset;
+  }
+  button:hover.icon {
+    box-shadow: unset;
+  }
+}

@@ -1,0 +1,38 @@
+<header class="header">
+
+  <!-- Upper / top navigation -->
+  <div class="upper-navigation">
+  </div>
+
+  <!-- Primary navigation -->
+  <div class="primary-navigation-wrapper">
+    <div class="container">
+      <!-- Primary navigation wrapper -->
+      <div class="primary-navigation">
+        <!-- Main menu links -->
+        <ul class="main-menu-links">
+          {% for link in linklists.main-menu.links -%}
+            <li>{{ link.title | link_to: link.url }}</li>
+          {%- endfor %}
+        </ul>
+        <!-- Logo-->
+        <img src="{{ 'logo.svg' | asset_url }}">
+        <!-- Other items -->
+        <div class="main-ui-links">
+          <form action="/search">
+            <input type="search" name="q"/>
+            <button class="icon" type="submit"><img class="icon" src="{{ 'search.png' | asset_url }}"></button>
+          </form>
+          <a href="/cart"><img class="icon" src="{{ 'shopping-bag.png' | asset_url }}"> <span class="cart-number">{{ cart.item_count }}</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+{% schema %}
+  {
+    "name": "Header"
+  }
+{% endschema %}

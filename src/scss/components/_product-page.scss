@@ -1,0 +1,12 @@
+@include media-breakpoint-up (xs) {
+  .product-page {
+    padding: $region-padding;
+    display: flex;
+    .product-image {
+      width: 50%;
+    }
+    .product-form {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@include media-breakpoint-up(xs) {
+  .header {
+    .upper-navigation {
+      background-color: $primary-colour;
+      min-height: 30px;
+    }
+    .primary-navigation-wrapper {
+      border-bottom: 1px solid $secondary-colour;
+      display: flex;
+      align-items: center;
+      min-height: 100px;
+      .primary-navigation {
+        display: flex;
+        justify-content: center;
+        ul.main-menu-links {
+          display: none;
+        }
+        .main-ui-links {
+          display: none;
+          .cart-number {
+            background-color: #f25858;
+            color: $secondary-colour;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header {
+    .primary-navigation-wrapper {
+      .primary-navigation {
+        justify-content: space-between;
+        ul.main-menu-links {
+          display: flex;
+          gap: 1rem;
+          li {
+            list-style: none;
+          }
+        }
+        .main-ui-links {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          li {
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+}

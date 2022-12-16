@@ -1,0 +1,31 @@
+<footer class="footer">
+
+  <!-- Footer navigation -->
+  <div class="footer-wrapper container">
+    <div class="footer-menu-logo"> 
+      <img src="{{ 'logo.svg' | asset_url }}">
+    </div>
+    <div>
+      <ul class="footer-menu-links">
+        <!-- Footer menu -->
+        {% for link in linklists['footer'].links -%}
+          <li>{{ link.title | link_to: link.url }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Lower / bottom footer -->
+  <div class="bottom-footer">
+    <div class="container">
+      <p>Lorem</p>
+    </div>
+  </div>
+
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer"
+  }
+{% endschema %}

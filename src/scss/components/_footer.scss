@@ -1,0 +1,12 @@
+@include media-breakpoint-up (xs) {
+  .footer {
+    background-color: $secondary-colour;
+    .footer-wrapper {
+      padding: $region-padding;
+    }
+    .bottom-footer {
+      padding: 1rem 0;
+      border-top: 1px solid #eaeaea;
+    }
+  }
+}

@@ -1,14 +1,21 @@
 <html>
 
-<head>
-  {{ content_for_header }}
-  {{ 'style.css' | asset_url | stylesheet_tag }}
-</head>
+  <head>
+    {{ content_for_header }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
-  {% render 'header' %}
-  {{ content_for_layout}}
-  {{ 'script.js' | asset_url | script_tag }}
-</body>
+  <body>
+    {% section 'header' %}
+    {{ content_for_layout}}
+    {% section 'footer' %}
+    {{ 'script.js' | asset_url | script_tag }}
+  </body>
 
 </html>

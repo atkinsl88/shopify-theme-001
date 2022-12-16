@@ -1,25 +1,47 @@
 {% form 'cart', cart %}
-  <!-- Cart Title -->
-  <h1>Cart</h1>
-  <!-- If Cart if empty -->
-  {% if cart.empty? %}
-    <!-- Display this message -->
-    <p>No items available</p>
-  {% else %}
-    <!-- Else display Cart items -->
-    {% for item in cart.items %}
-      <div>
-        <img src="{{ item.image | image_url: width: 200 }}"/>
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.price | money }}</p>
-        <input name="updates[]" value="{{ item.quantity }}">
-        <a href="{{ item.url_to_remove }}">Remove</a>
-      </div>
-    {% endfor %}
-    <!-- Total amount -->
-    <p>Total is: {{ cart.total_price | money }}</p>
-    <!-- Buttons -->
-    <button type="submit" name="update">Update</button>
-    <button type="submit" name="checkout">Checkout</button>
-  {% endif %}
+
+  <div class="container">
+    <div class="hero-banner">
+      <h1>Cart</h1>
+    </div>
+    <!-- If Cart if empty -->
+    {% if cart.empty? %}
+      <!-- Display this message -->
+      <p>No items available</p>
+    {% else %}
+      <!-- Else display Cart items -->
+        <table class="cart">
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+          {% for item in cart.items %}
+          <tr>
+            <td class="cart-product">
+              <img src="{{ item.image | image_url: width: 200 }}"/>
+              <p>{{ item.title }}</p>
+            </td>
+            <td>
+              <p>{{ item.price | money }}</p>
+            </td>
+            <td>
+              <input name="updates[]" value="{{ item.quantity }}">
+              <a href="{{ item.url_to_remove }}">Remove</a>
+            </td>
+                        <td>
+              <p>{{ item.price | money }}</p>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      <!-- Total amount -->
+      <p>Total is: {{ cart.total_price | money }}</p>
+      <!-- Buttons -->
+      <button type="submit" name="update">Update</button>
+      <button type="submit" name="checkout">Checkout</button>
+    {% endif %}
+  </div>
+
 {% endform %}
