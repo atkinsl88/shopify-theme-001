@@ -1,0 +1,24 @@
+@include media-breakpoint-up (xs) {
+  .featured-categories {
+    width: 100%;
+    padding: 4rem 0;
+    .categories-text {
+      padding: 1rem 0;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+    .categories-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      text-align: center;
+      img {
+        max-width: 300px;
+      }
+      p {
+        padding: 1rem 0;
+      }
+    }
+  }
+}

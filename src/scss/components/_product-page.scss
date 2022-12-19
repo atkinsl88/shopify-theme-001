@@ -1,12 +1,27 @@
 @include media-breakpoint-up (xs) {
-  .product-page {
-    padding: $region-padding;
-    display: flex;
-    .product-image {
-      width: 50%;
-    }
-    .product-form {
-      width: 50%;
+  .product-page-wrapper {
+    padding: 14rem 0 4rem 0;
+    .product-page {
+      display: flex;
+      gap: 2rem;
+      .product-image {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .product-form {
+        width: 50%;
+        .product-title {
+          margin-bottom: 2rem;
+        }
+        .product-price {
+          margin-bottom: 2rem;
+        }
+        .product-desc {
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,18 @@
+@include media-breakpoint-up (xs) {
+  .blog-posts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 4rem;
+    .blog-post {
+      max-width: 32%;
+      img {
+        width: 100%;
+      }
+      .blog-text {
+        padding: 1rem 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+}

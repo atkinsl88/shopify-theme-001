@@ -17,30 +17,30 @@ $gutters: unset;
 /** Font Sizes **/
 $mob-font-size-lg: 1rem; // 18
 $mob-font-size-md: 1rem; // 18
-$mob-font-size-sm: 0.75rem; // 18
-$mob-font-size-h1: 1.25rem; // 18
-$mob-font-size-h2: 1.25rem; // 18
-$mob-font-size-h3: 1.25rem; // 18
+$mob-font-size-sm: 1rem; // 18
+$mob-font-size-h1: 2rem; // 18
+$mob-font-size-h2: 1.75rem; // 18
+$mob-font-size-h3: 1.5rem; // 18
 $mob-font-size-h4: 1rem; // 18
 
 $tab-font-size-lg: 1rem; // 18
 $tab-font-size-md: 1rem; // 18
-$tab-font-size-sm: 0.75rem; // 18
-$tab-font-size-h1: 1.25rem; // 18
-$tab-font-size-h2: 1.25rem; // 18
-$tab-font-size-h3: 1.25rem; // 18
+$tab-font-size-sm: 1rem; // 18
+$tab-font-size-h1: 4rem; // 18
+$tab-font-size-h2: 2rem; // 18
+$tab-font-size-h3: 1.75rem; // 18
 $tab-font-size-h4: 1rem; // 18
 
 $desk-font-size-lg: 1rem;
 $desk-font-size-md: 1rem;
-$desk-font-size-sm: 0.75rem;
-$desk-font-size-h1: 2.5rem;
-$desk-font-size-h2: 2rem;
-$desk-font-size-h3: 1.75rem;
+$desk-font-size-sm: 1rem;
+$desk-font-size-h1: 4rem;
+$desk-font-size-h2: 2.25rem;
+$desk-font-size-h3: 2rem;
 $desk-font-size-h4: 1rem;
 
 /** Padding **/
-$region-padding: 4rem 0;
+$region-padding: 0 0 4rem 0;
 
 /** Margin **/
 $region-margin: 2rem 0;
@@ -50,4 +50,8 @@ $region-margin: 2rem 0;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.select {
+  display: none;
 }

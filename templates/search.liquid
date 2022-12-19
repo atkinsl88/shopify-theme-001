@@ -1,6 +1,41 @@
-<h1>Search results</h1>
+<div class="hero-banner container">
+  <h1>Search</h1>
+</div>
+
+<div class="search-results container">
+  <p>Type in a search term</p>
+  <form action="{{ routes.search_url }}">
+    <input type="text"
+      placeholder="Search"
+      name="q"
+      value="{{ search.terms | escape }}"
+  >
+    <input type="submit" value="Search">
+  </form>
 
 
-{% for result in search.results %}
-  <p>{{ result.object_type }}</p>
-{% endfor %}
+  {% for item in search.results %}
+    <h3>
+      {{ item.title | link_to: item.url }}
+    </h3>
+    {% if item.object_type == 'article' -%}
+      {% if item.image -%}
+        <div class="result-image">
+          <a href="{{ item.url }}" title="{{ item.title | escape }}">
+            {{ item | image_url: width: 100 | image_tag }}
+          </a>
+        </div>
+      {% endif %}
+    {%- elsif item.object_type == 'page' -%}
+    {%- else -%}
+      {%- if item.featured_image -%}
+        <div class="result-image">
+          <a href="{{ item.url }}" title="{{ item.title | escape }}">
+            {{ item.featured_image | image_url: width: 100 | image_tag }}
+          </a>
+        </div>
+      {% endif %}
+    {%- endif -%}
+    <span>{{ item.content | strip_html | truncatewords: 40 | highlight: search.terms }}</span>
+  {% endfor %}
+</div>

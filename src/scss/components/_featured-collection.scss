@@ -1,6 +1,6 @@
 @include media-breakpoint-up (xs) {
   .featured-collection {
-    padding: $region-padding;
+    padding: 4rem 0;
     .collection-intro {
       display: flex;
       flex-direction: column;

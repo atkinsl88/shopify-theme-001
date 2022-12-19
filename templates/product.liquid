@@ -1,25 +1,36 @@
-<section class="product-page container">
+<section class="product-page-wrapper container">
 
-  <div class="product-image">
-    <img src="{{ product | image_url: width: 400 }}"/>
+  <div class="product-breadcrumb">
+    <p>Breadcrumb</p>
   </div>
 
-  <div class="product-form">
-    <h1>{{ product.title }}</h1>
-    <p>{{ product.price | money }}</p>
-    <p>{{ product.description }}</p>
+  <div class="product-page">
+    <div class="product-image">
+      <img src="{{ product | image_url: width: 400 }}"/>
+    </div>
 
-    {% form 'product', product %}
-      <select name="id">
-        {% for variant in product.variants %}
-          <option value={{ variant.id }}>
-            {{ variant.title }}
-          </option>
-        {% endfor %}
-      </select>
+    <div class="product-form">
+      <h2 class="product-title">{{ product.title }}</h2>
+      <h3 class="product-price">{{ product.price | money }}</h3>
+      <p class="product-desc">{{ product.description }}</p>
 
-      <button type="submit">Add to cart</button>
-    {% endform %}
+      {% form 'product', product %}
+
+        <select class="select" name="id">
+          {% for variant in product.variants %}
+            <option value={{ variant.id }}>
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+
+        <button type="submit">Add to cart</button>
+      {% endform %}
+    </div>
+
   </div>
+
+      <hr>
+
 
 </section>

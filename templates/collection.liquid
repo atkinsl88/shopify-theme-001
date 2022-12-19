@@ -1,27 +1,38 @@
+<!-- Include pagination -->
 {% paginate collection.products by 20 %}
 
+<!-- Hero banner -->
 <div class="hero-banner container">
   <h1>{{ collection.title }}</h1>
 </div>
 
-<select id="sort-by">
-  {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
 
-  {% for option in collection.sort_options %}
-    <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-      {{ option.name }}
-    </option>
-  {% endfor %}
-</select>
+<div class="collections-wrapper container">
 
-<div class="container">
-  
-  {% for product in collections['frontpage'].products %}
-    <!-- Mark-up for each product, looped through -->
-    {% render 'product-item', product: product %}
-  {% endfor %}
-  
+  <div class="collections-results">
+    <!-- Showing results-->
+    <p>Showing all xxx results</p>
+    <!-- Add 'sort by' widget-->
+    <select id="sort-by">
+      {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+
+      {% for option in collection.sort_options %}
+        <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+          {{ option.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Loop through each product item snippet -->
+  <div class="product-cards-wrapper">
+    {% for product in collections['all'].products %}
+      {% render 'product-item', product: product %}
+    {% endfor %}
+  </div>
+
 </div>
+
 
   {{ paginate | default_pagination }}
 {% endpaginate %}

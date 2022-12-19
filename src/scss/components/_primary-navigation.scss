@@ -1,10 +1,14 @@
 @include media-breakpoint-up(xs) {
   .header {
-    .upper-navigation {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  .upper-navigation {
       background-color: $primary-colour;
       min-height: 30px;
     }
     .primary-navigation-wrapper {
+      background-color: $secondary-colour;
       border-bottom: 1px solid $secondary-colour;
       display: flex;
       align-items: center;
@@ -12,14 +16,24 @@
       .primary-navigation {
         display: flex;
         justify-content: center;
-        ul.main-menu-links {
-          display: none;
+        .logo-and-links {
+          display: flex;
+          align-items: center;
+          ul.main-menu-links {
+            display: none;
+          }
         }
         .main-ui-links {
           display: none;
           .cart-number {
             background-color: #f25858;
             color: $secondary-colour;
+            padding: 2px 4px;
+            text-align: center;
+            font-size: 0.6rem;
+            position: relative;
+            top: -20px;
+            left: -15px;
           }
         }
       }
@@ -32,11 +46,12 @@
     .primary-navigation-wrapper {
       .primary-navigation {
         justify-content: space-between;
-        ul.main-menu-links {
-          display: flex;
-          gap: 1rem;
-          li {
-            list-style: none;
+        .logo-and-links {
+          ul.main-menu-links {
+            display: flex;
+            li {
+              list-style: none;
+            }
           }
         }
         .main-ui-links {

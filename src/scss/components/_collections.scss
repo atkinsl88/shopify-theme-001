@@ -1,0 +1,16 @@
+@include media-breakpoint-up (xs) {
+  .collections-wrapper {
+    .collections-results {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 2rem 0;
+    }
+    .product-cards-wrapper {
+      padding: 0 0 4rem 0;
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}

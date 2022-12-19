@@ -1,11 +1,25 @@
-      <!-- Mark-up for each product, looped through -->
-      <div class="product-card">
-        <a href="{{ product.url }}">
-          <img src="{{ product | image_url: width: 400 }}"/>
-          <div class="product-text">
-            <p>{{ product.title }}</p>
-            <p>{{ product.price | money }}</p>
-            <button>Read more</button>
-          </div>
-        </a>
+<!-- Product card snippet-->
+
+  <div class="product-card">
+    <a href="{{ product.url }}">
+      <img src="{{ product | image_url: width: 400 }}"/>
+      <div class="product-text">
+        <p>{{ product.title }}</p>
+        <p>{{ product.price | money }}</p>
       </div>
+    </a>
+
+      {% form 'product', product %}
+      
+        <select class="select" name="id">
+          {% for variant in product.variants %}
+            <option value={{ variant.id }}>
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+
+        <button type="submit">Add to cart</button>
+      {% endform %}
+      
+  </div>

@@ -9,22 +9,34 @@
     <div class="container">
       <!-- Primary navigation wrapper -->
       <div class="primary-navigation">
-        <!-- Main menu links -->
-        <ul class="main-menu-links">
-          {% for link in linklists.main-menu.links -%}
-            <li>{{ link.title | link_to: link.url }}</li>
-          {%- endfor %}
-        </ul>
-        <!-- Logo-->
-        <img src="{{ 'logo.svg' | asset_url }}">
+
+        <div class="logo-and-links">
+          <!-- Logo-->
+          <a href="/"><img src="{{ 'logo.svg' | asset_url }}"></a>
+          <!-- Main menu links -->
+          <ul class="main-menu-links">
+            {% for link in linklists.main-menu.links -%}
+              <li>{{ link.title | link_to: link.url }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        
         <!-- Other items -->
         <div class="main-ui-links">
-          <form action="/search">
-            <input type="search" name="q"/>
-            <button class="icon" type="submit"><img class="icon" src="{{ 'search.png' | asset_url }}"></button>
-          </form>
-          <a href="/cart"><img class="icon" src="{{ 'shopping-bag.png' | asset_url }}"> <span class="cart-number">{{ cart.item_count }}</span></a>
+
+          <div class="search-dropdown">
+            <button class="icon-search"><a href="/search"><img class="icon-search" src="{{ 'search.png' | asset_url }}" /></a></button>
+          </div>
+
+          <a href="/cart">
+            <img class="icon-cart" src="{{ 'shopping-bag.png' | asset_url }}">
+            {% if cart.item_count > 0 %}
+              <span class="cart-number">{{ cart.item_count }}</span>
+            {% endif %}
+          </a>
         </div>
+
+
       </div>
     </div>
   </div>

@@ -4,21 +4,41 @@
   <div class="footer-wrapper container">
     <div class="footer-menu-logo"> 
       <img src="{{ 'logo.svg' | asset_url }}">
+      <p>Give your customers insight into your product collection.</p>
     </div>
-    <div>
-      <ul class="footer-menu-links">
-        <!-- Footer menu -->
-        {% for link in linklists['footer'].links -%}
-          <li>{{ link.title | link_to: link.url }}</li>
-        {%- endfor %}
-      </ul>
+    <div class="footer-links">
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-menu-links">
+          <!-- Footer menu -->
+          {% for link in linklists.main-menu.links -%}
+            <li>{{ link.title | link_to: link.url }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul class="footer-quick-links">
+          <!-- Footer menu -->
+          {% for link in linklists['footer'].links -%}
+            <li>{{ link.title | link_to: link.url }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 
   <!-- Lower / bottom footer -->
   <div class="bottom-footer">
     <div class="container">
-      <p>Lorem</p>
+      <div class="bottom-footer-content">
+        <div class="social-icons">
+          <a href="www.facebook.com" target="_blank"><img src="{{ 'facebook.png' | asset_url }}"></a>
+          <a href="www.instagram.com" target="_blank"><img src="{{ 'instagram.png' | asset_url }}"></a>
+          <a href="www.twitter.com" target="_blank"><img src="{{ 'twitter.png' | asset_url }}"></a>
+        </div>
+        <p>© 2022 Botiga.</p>
+      </div>
     </div>
   </div>
 

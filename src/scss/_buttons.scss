@@ -2,7 +2,7 @@
   button {
     background-color: $primary-colour;
     border: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -11,6 +11,7 @@
     color: $secondary-colour;
     text-transform: uppercase;
     @extend a;
+    margin-top: 1rem;
     a {
       color: $secondary-colour;
       text-transform: uppercase;
@@ -20,11 +21,11 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     background-color: #374151;
   }
-  button.icon {
+  button.icon-search {
     background-color: unset;
     padding: unset;
   }
-  button:hover.icon {
+  button:hover.icon-search {
     box-shadow: unset;
   }
 }
