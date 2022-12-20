@@ -28,4 +28,7 @@
   button:hover.icon-search {
     box-shadow: unset;
   }
+  input[type="submit"] {
+    @extend button;
+  }
 }

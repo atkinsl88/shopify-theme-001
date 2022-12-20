@@ -1,0 +1,8 @@
+@include media-breakpoint-up (xs) {
+  .article-page {
+    padding: $region-padding;
+    img {
+      padding: 2rem 0;
+    }
+  }
+}

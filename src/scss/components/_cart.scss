@@ -1,27 +1,29 @@
 @include media-breakpoint-up (xs) {
-  table.cart {
-    display: flex;
-    justify-content: center;
-    tbody {
-      border: 1px solid $secondary-colour;
-      width: 100%;
-    }
-    tr {
-      padding: 1.5rem;
-      b
-      th {
-        padding: 1.5rem;
-      }
-      td {
-        padding: 1.5rem;
-      }
-    }
-    .cart-product {
+  .cart-wrapper {
+    padding: $region-padding;
+    table.cart {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      img {
-        max-height: 150px;
+      justify-content: center;
+      tbody {
+        border: 1px solid #ebebeb;
+      }
+      tr {
+        padding: 1.5rem;
+        th {
+          padding: 1.5rem;
+          @extend p;
+        }
+        td {
+          padding: 1.5rem;
+        }
+      }
+      .cart-product {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          max-height: 150px;
+        }
       }
     }
   }

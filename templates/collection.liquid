@@ -11,7 +11,7 @@
 
   <div class="collections-results">
     <!-- Showing results-->
-    <p>Showing all xxx results</p>
+    <p>Products available: {{ collection.all_products_count }}</p>
     <!-- Add 'sort by' widget-->
     <select id="sort-by">
       {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}

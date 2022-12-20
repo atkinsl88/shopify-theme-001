@@ -1,0 +1,58 @@
+@include media-breakpoint-up (xs) {
+  .contact {
+    padding: $region-padding;
+    .contact-content {
+      display: flex;
+    }
+    .contact-map {
+      padding: 2rem 0;
+    }
+    .contact-details {
+      padding: 4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      .contact-form {
+        width: 50%;
+        .names {
+          display: flex;
+          .first-name {
+            display: flex;
+            flex-direction: column;
+          }
+          .last-name {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .details {
+          display: flex;
+          .phone {
+            display: flex;
+            flex-direction: column;
+          }
+          .email {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        .order-number {
+          display: flex;
+          flex-direction: column;
+        }
+        .message {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .store-details {
+        width: 50%;
+        ul {
+          li {
+            list-style: none;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

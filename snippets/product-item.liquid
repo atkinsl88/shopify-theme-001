@@ -5,7 +5,10 @@
       <img src="{{ product | image_url: width: 400 }}"/>
       <div class="product-text">
         <p>{{ product.title }}</p>
-        <p>{{ product.price | money }}</p>
+        <div class="compare-price">
+          <p class="compare">{{ product.compare_at_price | money }}</p>
+          <p class="price">{{ product.price | money }}</p>
+        </div>
       </div>
     </a>
 

@@ -2,45 +2,78 @@
   <h1>{{ page.title }}</h1>
 </div>
 
-<div class="container">
-  {{ page.content }}
+<div class="contact container">
 
-  {% form 'contact' %}
-    {{ form.errors | default_errors }}
+  <div class="contact-content">
+    {{ page.content }}
+  </div>
 
-    <div class="first-name">
-      <label for="first-name">First name</label>
-      <input type="text" name="contact[first_name]" id="first-name" />
+  <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47482226405!2d-0.24202307528054323!3d51.52855783403881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1sen!2suk!4v1671525255809!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div class="contact-details">
+
+    <div class="contact-form">
+      <h3>Leave us a message</h3>
+      {% form 'contact' %}
+        {{ form.errors | default_errors }}
+
+        <div class="names">
+          <div class="first-name">
+            <label for="first-name">First name</label>
+            <input type="text" name="contact[first_name]" id="first-name" />
+          </div>
+
+          <div class="last-name">
+            <label for="last-name">Last name</label>
+            <input type="text" name="contact[last_name]" id="last-name" />
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="phone">
+            <label for="phone">Phone</label>
+            <input type="tel" name="contact[phone]" id="phone" />
+          </div>
+
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="contact[email]" id="email" />
+          </div>
+        </div>
+
+        <div class="order-number">
+          <label for="order-number">Order number</label>
+          <input type="text" name="contact[order_number]" id="order-number" />
+        </div>
+
+        <div class="message">
+          <label for="message">Message</label>
+          <textarea name="contact[body]" id="message"></textarea>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Send message" />
+        </div>
+      {% endform %}
     </div>
 
-    <div class="last-name">
-      <label for="last-name">Last name</label>
-      <input type="text" name="contact[last_name]" id="last-name" />
+
+    <div class="store-details">
+      <h3>Our store</h3>
+      <ul>
+        <li>Big Ben, London, W1 4EG</li>
+        <li>020 8765 4321</li>
+        <li>email@example.com</li>
+      </ul>
+      <h3>Store hours</h3>
+      <ul>
+        <li>Mon - Fri, 9:30am - 6:00pm</li>
+        <li>Sat - Sun, 8:30am - 5:30pm</li>
+      </ul>
     </div>
 
-    <div class="phone">
-      <label for="phone">Phone</label>
-      <input type="tel" name="contact[phone]" id="phone" />
-    </div>
-
-    <div class="email">
-      <label for="email">Email</label>
-      <input type="email" name="contact[email]" id="email" />
-    </div>
-
-    <div class="order-number">
-      <label for="order-number">Order number</label>
-      <input type="text" name="contact[order_number]" id="order-number" />
-    </div>
-
-    <div class="message">
-      <label for="message">Message</label>
-      <textarea name="contact[body]" id="message"></textarea>
-    </div>
-
-    <div class="submit">
-      <input type="submit" value="Create" />
-    </div>
-  {% endform %}
+  </div>
 
 </div>
